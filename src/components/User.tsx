@@ -2,13 +2,13 @@ import React, { FC } from 'react';
 
 interface Props{
     name:string,
-    age?:number
+    age?:number,
+    addUser : ()=> void
     }
-const User:FC<Props> = (props) => {
-    const age = props.age
+const User:FC<Props> = ({name,age,addUser}) => {
     return (
         <div>
-            <h1>Hello from : {props.name}</h1>
+            <h1>Hello from : {name}</h1>
         </div>
     );
 };
